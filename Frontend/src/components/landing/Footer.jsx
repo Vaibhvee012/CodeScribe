@@ -4,8 +4,8 @@ const Footer = () => (
       <a href="#" className="font-semibold text-slate-900 dark:text-white">
         CodeScribe<span className="text-blue-600">.</span>
       </a>
-      <p>© 2024 CodeScribe. Built for thoughtful developers.</p>
-      <div className="flex gap-5">
+      <p className="max-w-full">© 2024 CodeScribe. Built for thoughtful developers.</p>
+      <div className="flex flex-wrap gap-x-5 gap-y-2">
         <a href="#features" className="hover:text-blue-600">Features</a>
         <a href="#about" className="hover:text-blue-600">About</a>
         <a href="#" className="hover:text-blue-600">Privacy</a>

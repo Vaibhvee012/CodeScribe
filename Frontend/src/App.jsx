@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import Landing from './pages/Landing'
+import CodeReview from './pages/CodeReview'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -12,7 +12,7 @@ function App() {
     document.documentElement.classList.toggle('dark', darkMode)
   }, [darkMode])
 
-  return <Landing darkMode={darkMode} onToggleTheme={() => setDarkMode((current) => !current)} />
+  return <CodeReview darkMode={darkMode} onToggleTheme={() => setDarkMode((current) => !current)} />
 }
 
 export default App

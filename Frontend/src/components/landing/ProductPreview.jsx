@@ -9,20 +9,20 @@ const ProductPreview = () => {
   return (
     <section id="review" className="mx-auto max-w-6xl px-5 lg:px-8">
       <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_24px_70px_-35px_rgba(15,23,42,.3)] dark:border-white/10 dark:bg-[#171a21]">
-        <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3 dark:border-white/10">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 px-3 py-3 dark:border-white/10 sm:px-4">
+          <div className="flex min-w-0 items-center gap-2">
             <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
             <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
             <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
-            <span className="ml-3 text-xs text-slate-400">user-service / profile.js</span>
+            <span className="ml-2 truncate text-xs text-slate-400 sm:ml-3">user-service / profile.js</span>
           </div>
           <span className="rounded-md bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-600 dark:bg-blue-950/50 dark:text-blue-300">
             Reviewed just now
           </span>
         </div>
         <div className="grid lg:grid-cols-[1.08fr_.92fr]">
-          <div className="min-h-[350px] border-b border-slate-200 bg-[#f8fafc] p-6 font-mono text-xs leading-8 dark:border-white/10 dark:bg-[#12151b] sm:p-8">
-            <div className="mb-6 flex gap-5 text-[11px] text-slate-400">
+          <div className="min-w-0 border-b border-slate-200 bg-[#f8fafc] p-4 font-mono text-[11px] leading-7 dark:border-white/10 dark:bg-[#12151b] sm:min-h-[350px] sm:p-8 sm:text-xs sm:leading-8">
+            <div className="mb-6 flex gap-4 overflow-hidden text-[11px] text-slate-400 sm:gap-5">
               <span className="border-b-2 border-blue-500 pb-2 text-slate-700 dark:text-slate-200">profile.js</span>
               <span>auth.js</span>
               <span>utils.js</span>
@@ -36,17 +36,17 @@ const ProductPreview = () => {
                     : 'text-slate-600 dark:text-slate-400'
                 }
               >
-                <span className="mr-6 inline-block w-3 text-right text-slate-300 dark:text-slate-600">
+                <span className="mr-3 inline-block w-3 text-right text-slate-300 dark:text-slate-600 sm:mr-6">
                   {i + 1}
                 </span>
-                {line}
+                <span className="break-all">{line}</span>
               </div>
             ))}
             <div className="mt-7 rounded-lg border border-blue-200 bg-blue-50/70 p-3 text-[11px] leading-5 text-blue-800 dark:border-blue-900/50 dark:bg-blue-950/20 dark:text-blue-200">
               ⌁ CodeScribe found a potential null reference on line 3.
             </div>
           </div>
-          <div className="p-6 sm:p-8">
+          <div className="min-w-0 p-4 sm:p-8">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[.16em] text-slate-400">

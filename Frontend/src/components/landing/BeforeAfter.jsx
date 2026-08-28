@@ -18,7 +18,7 @@ const BeforeAfter = () => (
               Needs attention
             </span>
           </div>
-          <pre className="font-mono text-xs leading-7 text-slate-500 dark:text-slate-400">
+          <pre className="whitespace-pre-wrap break-words font-mono text-xs leading-7 text-slate-500 dark:text-slate-400">
             {`const total = items.reduce(\n  (sum, item) => sum + item.price,\n  0\n);\n\ncheckout(total);`}
           </pre>
           <div className="mt-8 flex items-center gap-3">
@@ -29,15 +29,15 @@ const BeforeAfter = () => (
         <div className="bg-blue-600 p-6 text-white sm:p-8">
           <div className="mb-7 flex items-center justify-between">
             <span className="text-xs font-semibold uppercase tracking-widest text-blue-100">After</span>
-            <span className="rounded-full bg-white/15 px-2.5 py-1 text-xs font-semibold text-blue-50">
+            <span className="rounded-full bg-green-600/80 px-2.5 py-1 text-xs font-semibold text-green-950/90">
               Recommended
             </span>
           </div>
-          <pre className="font-mono text-xs leading-7 text-blue-50">
+          <pre className="whitespace-pre-wrap break-words font-mono text-xs leading-7 text-blue-50">
             {`const total = items.reduce(\n  (sum, { price = 0 }) =>\n    sum + Math.max(0, price),\n  0\n);\n\nawait checkout({ total });`}
           </pre>
           <div className="mt-8 flex items-center gap-3">
-            <span className="text-3xl font-semibold">96</span>
+            <span className="text-3xl text-green-500 font-semibold">96</span>
             <span className="text-sm text-blue-100">/ 100<br />Review score</span>
           </div>
         </div>
