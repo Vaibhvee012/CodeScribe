@@ -29,7 +29,7 @@ const ChangesMade = ({ changes }) => (
                 {changes.map((change) => (
 
                     <div
-                        key={change.type}
+                        key={change._id || `${change.type}-${change.title}`}
                         className="flex gap-3"
                     >
 
