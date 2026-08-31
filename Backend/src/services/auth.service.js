@@ -1,7 +1,7 @@
 import bcrypt from "bcryptjs";
-import User from "../models/User.model.js";
 import jwt from "jsonwebtoken";
 
+import User from "../models/User.model.js";
 
 const registerUser = async ({ username, email, password }) => {
 
@@ -79,8 +79,8 @@ const loginUser = async ({ email, password }) => {
     };
 };
 
-
 const getCurrentUser = async (userId) => {
+
     const user = await User.findById(userId).select("-password");
 
     if (!user) {
@@ -94,9 +94,8 @@ const getCurrentUser = async (userId) => {
     };
 };
 
-
 export default {
     registerUser,
     loginUser,
-    getCurrentUser
+    getCurrentUser,
 };

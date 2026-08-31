@@ -2,21 +2,30 @@ import axios from "axios";
 
 const API_BASE_URL = "http://localhost:3000/api";
 
-const reviewCode = async (reviewData) => {
+const getAuthConfig = () => {
     const token = localStorage.getItem("jwt_token");
-    const config = {
+
+    return {
         headers: {
             Authorization: `Bearer ${token}`,
         },
     };
+};
 
-    console.log("TOKEN:", token);
-    console.log("AXIOS CONFIG:", config);
-
+const reviewCode = async (reviewData) => {
     const response = await axios.post(
         `${API_BASE_URL}/code-review`,
         reviewData,
-        config
+        getAuthConfig()
+    );
+
+    return response.data.data;
+};
+
+const getReviewHistory = async () => {
+    const response = await axios.get(
+        `${API_BASE_URL}/code-review/history`,
+        getAuthConfig()
     );
 
     return response.data.data;
@@ -24,4 +33,5 @@ const reviewCode = async (reviewData) => {
 
 export default {
     reviewCode,
+    getReviewHistory,
 };

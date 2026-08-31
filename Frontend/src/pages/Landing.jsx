@@ -14,7 +14,7 @@ const Landing = ({ darkMode, onToggleTheme }) => <div className="min-h-screen ov
     <Features />
     <BeforeAfter />
     <HowItWorks />
-    <CTA />.jsx
+    <CTA />
     </main>
   <Footer />
 </div>

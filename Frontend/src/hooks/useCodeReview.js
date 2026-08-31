@@ -1,55 +1,25 @@
 import { useState } from "react";
-
-import codeReviewService from "../services/codeReview.service";
+import codeReviewService from "../services/codeReview.service.js";
 
 const useCodeReview = () => {
-
-    // Code review form state
-
     const [code, setCode] = useState("");
-
     const [language, setLanguage] = useState("JavaScript");
-
     const [techType, setTechType] = useState("React");
-
     const [description, setDescription] = useState("");
 
-
-    // Review state
-
-    const [loading, setLoading] = useState(false);
-
     const [reviewResult, setReviewResult] = useState(null);
-
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
-
-    // Review handler
-
     const handleReview = async () => {
-
         setError("");
 
-        // Validation
-
         if (!code.trim()) {
-            setError("Please enter your code.");
+            setError("Please enter some code to review.");
             return;
         }
-
-        if (!language) {
-            setError("Please select a language.");
-            return;
-        }
-
-        if (!techType) {
-            setError("Please select a technology.");
-            return;
-        }
-
 
         try {
-
             setLoading(true);
 
             const result = await codeReviewService.reviewCode({
@@ -60,24 +30,31 @@ const useCodeReview = () => {
             });
 
             setReviewResult(result);
+        } catch (error) {
+    console.error("Review failed:", error);
 
-        } catch (err) {
-
-            setError("Something went wrong while reviewing the code.");
+    if (error.response?.status === 401) {
+        setError("Your session has expired. Please log in again.");
+    } else if (error.response?.status === 429) {
+        setError("AI review limit reached. Please try again later.");
+    } else if (error.response?.status === 503) {
+        setError(
+            "The AI service is temporarily busy. Please try again in a moment."
+        );
+    } else if (error.response?.status >= 500) {
+        setError(
+            "The AI review service is temporarily unavailable."
+        );
+    } else {
+        setError("Unable to review the code. Please try again.");
+    }
 
         } finally {
-
             setLoading(false);
-
         }
-
     };
 
-
     return {
-
-        // Form state
-
         code,
         setCode,
 
@@ -90,20 +67,12 @@ const useCodeReview = () => {
         description,
         setDescription,
 
-
-        // Review state
-
         loading,
         reviewResult,
         error,
 
-
-        // Actions
-
         handleReview,
-
     };
-
 };
 
 export default useCodeReview;

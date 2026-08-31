@@ -5,6 +5,8 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Landing from "./pages/Landing";
 import ProtectedRoute from "./components/ProtectedRoute";
+import ReviewHistory from "./pages/ReviewHistory";
+import ReviewHistoryDetail from "./pages/ReviewHistoryDetail";
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -24,6 +26,8 @@ function App() {
         <Route path="/login" element={<Login darkMode={darkMode} onToggleTheme={() => setDarkMode((current) => !current)} />} />
         <Route path="/register" element={<Register darkMode={darkMode} onToggleTheme={() => setDarkMode((current) => !current)} />} />
         <Route path="/code-review" element={<ProtectedRoute><CodeReview darkMode={darkMode} onToggleTheme={() =>setDarkMode((current) => !current)}/></ProtectedRoute>}/>
+        <Route path="/history" element={ <ProtectedRoute> <ReviewHistory darkMode={darkMode} onToggleTheme={() =>setDarkMode((current) => !current) }/> </ProtectedRoute>}/>
+        <Route path="/history/:reviewId" element={<ProtectedRoute><ReviewHistoryDetail darkMode={darkMode} onToggleTheme={() => setDarkMode((current) => !current)} /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   )
