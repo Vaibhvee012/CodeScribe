@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import CodeScribeLogo from "../components/CodeScribeLogo";
 import authService from "../services/auth.service";
 
 const passwordRules = [
@@ -168,10 +168,7 @@ const Register = ({ darkMode, onToggleTheme }) => {
                             to="/"
                             className="flex w-fit items-center gap-2 text-sm font-semibold text-blue-600 transition hover:text-blue-500 dark:text-blue-300 dark:hover:text-blue-200"
                         >
-                            <span className="grid h-7 w-7 place-items-center rounded-md bg-blue-600 text-xs font-bold text-white shadow-lg shadow-blue-600/25">
-                                C
-                            </span>
-
+                            <CodeScribeLogo size={32} />
                             CodeScribe
                         </Link>
 

@@ -1,3 +1,4 @@
+import CodeScribeLogo from "../CodeScribeLogo";
 import UserMenu from "./UserMenu";
 
 const CodeReviewNavbar = ({ darkMode, onToggleTheme }) => (
@@ -8,25 +9,11 @@ const CodeReviewNavbar = ({ darkMode, onToggleTheme }) => (
                 href="/"
                 className="flex items-center gap-2.5 text-[17px] font-semibold tracking-tight text-slate-950 dark:text-white"
             >
-                <span className="grid h-8 w-8 place-items-center rounded-[10px] bg-blue-600 text-white shadow-lg shadow-blue-600/20">
-                    <svg
-                        viewBox="0 0 20 20"
-                        fill="none"
-                        className="h-4 w-4"
-                        aria-hidden="true"
-                    >
-                        <path
-                            d="M5 4.5 2.5 7 5 9.5M15 4.5 17.5 7 15 9.5M11.5 3l-3 8"
-                            stroke="currentColor"
-                            strokeWidth="1.6"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                    </svg>
-                </span>
+                <CodeScribeLogo size={34} />
 
                 CodeScribe
             </a>
+
 
             <div className="flex items-center gap-3">
 

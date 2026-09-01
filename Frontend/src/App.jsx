@@ -7,7 +7,7 @@ import Landing from "./pages/Landing";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ReviewHistory from "./pages/ReviewHistory";
 import ReviewHistoryDetail from "./pages/ReviewHistoryDetail";
-
+import Profile from "./pages/Profile";
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
     const saved = localStorage.getItem('codescribe-theme')
@@ -28,6 +28,7 @@ function App() {
         <Route path="/code-review" element={<ProtectedRoute><CodeReview darkMode={darkMode} onToggleTheme={() =>setDarkMode((current) => !current)}/></ProtectedRoute>}/>
         <Route path="/history" element={ <ProtectedRoute> <ReviewHistory darkMode={darkMode} onToggleTheme={() =>setDarkMode((current) => !current) }/> </ProtectedRoute>}/>
         <Route path="/history/:reviewId" element={<ProtectedRoute><ReviewHistoryDetail darkMode={darkMode} onToggleTheme={() => setDarkMode((current) => !current)} /></ProtectedRoute>} />
+        <Route path="/profile" element={<ProtectedRoute><Profile darkMode={darkMode} onToggleTheme={() => setDarkMode((current) => !current)} /></ProtectedRoute>} />
       </Routes>
     </BrowserRouter>
   )

@@ -4,7 +4,6 @@ import jwt from "jsonwebtoken";
 import User from "../models/User.model.js";
 
 const registerUser = async ({ username, email, password }) => {
-
     // Check if user already exists
     const existingUser = await User.findOne({ email });
 
@@ -36,11 +35,11 @@ const registerUser = async ({ username, email, password }) => {
         id: user._id,
         username: user.username,
         email: user.email,
+        about: user.about || "",
     };
 };
 
 const loginUser = async ({ email, password }) => {
-
     // Find user
     const user = await User.findOne({ email });
 
@@ -75,12 +74,12 @@ const loginUser = async ({ email, password }) => {
             id: user._id,
             username: user.username,
             email: user.email,
+            about: user.about || "",
         },
     };
 };
 
 const getCurrentUser = async (userId) => {
-
     const user = await User.findById(userId).select("-password");
 
     if (!user) {
@@ -91,6 +90,39 @@ const getCurrentUser = async (userId) => {
         id: user._id,
         username: user.username,
         email: user.email,
+        about: user.about || "",
+    };
+};
+
+const updateProfile = async (userId, { username, about }) => {
+    if (!username || !username.trim()) {
+        throw new Error("Username is required");
+    }
+
+    if (username.trim().length < 3) {
+        throw new Error("Username must be at least 3 characters");
+    }
+
+    if (about && about.trim().length > 300) {
+        throw new Error("About must be 300 characters or less");
+    }
+
+    const user = await User.findById(userId);
+
+    if (!user) {
+        throw new Error("User not found");
+    }
+
+    user.username = username.trim();
+    user.about = about?.trim() || "";
+
+    await user.save();
+
+    return {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        about: user.about,
     };
 };
 
@@ -98,4 +130,6 @@ export default {
     registerUser,
     loginUser,
     getCurrentUser,
+    updateProfile,
 };
+

@@ -22,6 +22,12 @@ const userSchema = new mongoose.Schema(
             required: true,
             minlength: 6,
         },
+        about: {
+            type: String,
+            default: "",
+            maxlength: 300,
+            trim: true,
+        },
     },
     {
         timestamps: true,

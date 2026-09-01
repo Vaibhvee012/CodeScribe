@@ -1,5 +1,7 @@
 import authService from "../services/auth.service.js";
 
+
+
 export const register = async (req, res) => {
     try {
         const { username, email, password } = req.body;
@@ -66,6 +68,31 @@ export const getMe = async (req, res) => {
         res.status(404).json({
             success: false,
             message: error.message,
+        });
+    }
+};
+
+export const updateProfile = async (req, res) => {
+    try {
+        const userId = req.user.userId;
+
+        const { username, about } = req.body;
+
+        const user = await authService.updateProfile(userId, {
+            username,
+            about,
+        });
+
+        res.status(200).json({
+            success: true,
+            data: user,
+        });
+    } catch (error) {
+        console.error("Profile update error:", error);
+
+        res.status(400).json({
+            success: false,
+            message: error.message || "Failed to update profile",
         });
     }
 };

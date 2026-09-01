@@ -1,58 +1,40 @@
 import authApi from "../api/auth.api.js";
 
-const register = async ({
-    username,
-    email,
-    password,
-}) => {
-    return await authApi.register({
-        username,
-        email,
-        password,
-    });
+const register = async (userData) => {
+    return await authApi.register(userData);
 };
 
-const login = async ({
-    email,
-    password,
-}) => {
-    const result = await authApi.login({
-        email,
-        password,
-    });
+const login = async (credentials) => {
+    const result = await authApi.login(credentials);
 
-    const token = result.data.token;
+    if (result?.data?.token) {
+        localStorage.setItem("jwt_token", result.data.token);
 
-    localStorage.setItem("jwt_token", token);
-
-    localStorage.setItem(
-        "user",
-        JSON.stringify(result.data.user)
-    );
+        if (result.data.user) {
+            localStorage.setItem(
+                "user",
+                JSON.stringify(result.data.user)
+            );
+        }
+    }
 
     return result;
 };
 
-const getCurrentUser = async () => {
-    const token = localStorage.getItem("jwt_token");
-
-    if (!token) {
-        return null;
-    }
-
-    const result = await authApi.getMe(token);
-
-    return result.data;
+const getMe = async (token) => {
+    return await authApi.getMe(token);
 };
 
-const logout = () => {
-    localStorage.removeItem("jwt_token");
-    localStorage.removeItem("user");
+const updateProfile = async ({ username, about }) => {
+    return await authApi.updateProfile({
+        username,
+        about,
+    });
 };
 
 export default {
     register,
     login,
-    getCurrentUser,
-    logout,
+    getMe,
+    updateProfile,
 };

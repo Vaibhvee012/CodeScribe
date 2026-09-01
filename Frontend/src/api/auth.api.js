@@ -33,8 +33,25 @@ const getMe = async (token) => {
     return response.data;
 };
 
+const updateProfile = async (profileData) => {
+    const token = localStorage.getItem("jwt_token");
+
+    const response = await axios.patch(
+        `${API_BASE_URL}/profile`,
+        profileData,
+        {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }
+    );
+
+    return response.data.data;
+};
+
 export default {
     register,
     login,
     getMe,
+    updateProfile,
 };
