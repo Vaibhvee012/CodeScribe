@@ -6,7 +6,7 @@
 CodeScribe reviews every submission for bugs, security risks, performance issues, and quality concerns — combining a generative AI review with deterministic static analysis, backed by persistent review history.
  
 </div>
----
+
  
 ## Overview
  
