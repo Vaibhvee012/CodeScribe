@@ -8,8 +8,12 @@ CodeScribe reviews every submission for bugs, security risks, performance issues
 
 </div>
 
+<<<<<<< HEAD
 ---
 
+=======
+ 
+>>>>>>> f920206ff7db32e7ef59338b02b13a3e7a2916ae
 ## Overview
 
 CodeScribe takes a code snippet and runs it through two independent review layers in parallel:
@@ -177,5 +181,10 @@ The frontend runs on `http://localhost:5173` by default (Vite), and is currently
 - [x] Phase 8 — Testing, Polish & Deployment
 
 ## License
+<<<<<<< HEAD
 
 No license specified yet. Add a `LICENSE` file if you intend to open-source this project.
+=======
+ 
+No license specified yet. Add a `LICENSE` file if you intend to open-source this project.
+>>>>>>> f920206ff7db32e7ef59338b02b13a3e7a2916ae
