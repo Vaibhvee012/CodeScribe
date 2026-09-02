@@ -174,7 +174,7 @@ The frontend runs on `http://localhost:5173` by default (Vite), and is currently
 - [x] Phase 5 — AI Review Engine
 - [x] Phase 6 — Authentication & Review History
 - [x] Phase 7 — Static Code Analysis
-- [ ] Phase 8 — Testing, Polish & Deployment
+- [x] Phase 8 — Testing, Polish & Deployment
 
 ## License
 
