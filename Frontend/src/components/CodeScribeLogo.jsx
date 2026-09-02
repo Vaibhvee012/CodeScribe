@@ -1,3 +1,4 @@
+
 const CodeScribeLogo = ({ size = 34 }) => {
     return (
         <div

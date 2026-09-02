@@ -83,7 +83,7 @@ const ProductPreview = () => {
               </div>
             </div>
             <button className="mt-6 w-full rounded-lg bg-blue-600 py-2.5 text-xs font-semibold text-white hover:bg-blue-700">
-              View recommended fix <span className="ml-2">→</span>
+              View recommended fix <span className="ml-2"></span>
             </button>
           </div>
         </div>

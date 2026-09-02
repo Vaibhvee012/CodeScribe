@@ -104,16 +104,6 @@ const ReviewHistoryDetail = ({ darkMode, onToggleTheme }) => {
             <header className="border-b border-slate-200/80 bg-white/85 backdrop-blur-xl dark:border-white/10 dark:bg-[#101318]/90">
                 <nav className="mx-auto flex h-[72px] max-w-[1380px] items-center justify-between px-5 sm:px-8 lg:px-12">
 
-                    <Link
-                        to="/code-review"
-                        className="flex items-center gap-2.5 text-[17px] font-semibold tracking-tight text-slate-950 dark:text-white"
-                    >
-                        <span className="grid h-8 w-8 place-items-center rounded-[10px] bg-blue-600 text-white shadow-lg shadow-blue-600/20">
-                            C
-                        </span>
-
-                        CodeScribe
-                    </Link>
 
                     <div className="flex items-center gap-3">
 
