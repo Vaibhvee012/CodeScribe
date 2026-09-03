@@ -8,14 +8,14 @@ CodeScribe reviews every submission for bugs, security risks, performance issues
 
 <br>
 
-**🚀 Live Demo:** [https://code-scribe-ashen.vercel.app/](https://code-scribe-ashen.vercel.app/)  
-**⚙️ Backend API:** [codescribe-d8ad.onrender.com](https://codescribe-d8ad.onrender.com)  
-**💻 GitHub:** [Vaibhvee012/CodeScribe](https://github.com/Vaibhvee012/CodeScribe)
+** Live Demo:** [https://code-scribe-ashen.vercel.app/](https://code-scribe-ashen.vercel.app/)  
+** Backend API:** [codescribe-d8ad.onrender.com](https://codescribe-d8ad.onrender.com)  
+** GitHub:** [Vaibhvee012/CodeScribe](https://github.com/Vaibhvee012/CodeScribe)
 
 </div>
 ---
 
-## 🔑 Demo Credentials
+##  Demo Credentials
 
 Use the following test accounts to explore the application:
 
@@ -72,15 +72,15 @@ All reviews are stored in MongoDB and associated with the authenticated user, pr
 
 | Feature                   | Description                                                                               |
 | ------------------------- | ----------------------------------------------------------------------------------------- |
-| 🤖 **AI Code Review**     | Analyze code using Google Gemini with scores, metrics, recommendations, and improved code |
-| 🔍 **Static Analysis**    | Deterministic ESLint analysis for JavaScript and TypeScript                               |
-| 🔐 **Authentication**     | Secure JWT-based registration and login                                                   |
-| 👤 **User Profiles**      | Update username and profile information                                                   |
-| 📊 **Review History**     | Store and retrieve previous code reviews                                                  |
-| 📝 **Detailed Reviews**   | View complete analysis results for each submission                                        |
-| 🌓 **Theme Toggle**       | Light and dark mode support                                                               |
-| ⚡ **Parallel Analysis**   | AI review and static analysis run independently                                           |
-| 💾 **Persistent Storage** | Review data stored in MongoDB                                                             |
+|  **AI Code Review**     | Analyze code using Google Gemini with scores, metrics, recommendations, and improved code |
+|  **Static Analysis**    | Deterministic ESLint analysis for JavaScript and TypeScript                               |
+|  **Authentication**     | Secure JWT-based registration and login                                                   |
+|  **User Profiles**      | Update username and profile information                                                   |
+|  **Review History**     | Store and retrieve previous code reviews                                                  |
+|  **Detailed Reviews**   | View complete analysis results for each submission                                        |
+|  **Theme Toggle**       | Light and dark mode support                                                               |
+|  **Parallel Analysis**   | AI review and static analysis run independently                                           |
+|  **Persistent Storage** | Review data stored in MongoDB                                                             |
 
 ---
 
