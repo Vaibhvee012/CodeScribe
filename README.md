@@ -8,9 +8,9 @@ CodeScribe reviews every submission for bugs, security risks, performance issues
 
 <br>
 
-** Live Demo:** [https://code-scribe-ashen.vercel.app/](https://code-scribe-ashen.vercel.app/)  
-** Backend API:** [codescribe-d8ad.onrender.com](https://codescribe-d8ad.onrender.com)  
-** GitHub:** [Vaibhvee012/CodeScribe](https://github.com/Vaibhvee012/CodeScribe)
+Live Demo: [https://code-scribe-ashen.vercel.app/](https://code-scribe-ashen.vercel.app/)  
+Backend API: [codescribe-d8ad.onrender.com](https://codescribe-d8ad.onrender.com)  
+GitHub: [Vaibhvee012/CodeScribe](https://github.com/Vaibhvee012/CodeScribe)
 
 </div>
 ---
