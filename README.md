@@ -6,14 +6,13 @@
 
 CodeScribe reviews every submission for bugs, security risks, performance issues, and quality concerns — combining a generative AI review with deterministic static analysis, backed by persistent review history.
 
-<br/>
+<br>
 
-<a href="https://code-scribe-ashen.vercel.app"> <img src="https://img.shields.io/badge/🚀%20Live%20Demo-CodeScribe-blue?style=for-the-badge" alt="Live Demo"/> </a> &nbsp; <a href="https://codescribe-d8ad.onrender.com"> <img src="https://img.shields.io/badge/⚙️%20Backend%20API-Render-purple?style=for-the-badge" alt="Backend API"/> </a> &nbsp; <a href="https://github.com/Vaibhvee012/CodeScribe"> <img src="https://img.shields.io/badge/💻%20GitHub-Repository-black?style=for-the-badge&logo=github" alt="GitHub"/> </a>
-
-<br/><br/>
+**🚀 Live Demo:** [CodeScribe](https://code-scribe-ashen.vercel.app/)  
+**⚙️ Backend API:** [codescribe-d8ad.onrender.com](https://codescribe-d8ad.onrender.com)  
+**💻 GitHub:** [Vaibhvee012/CodeScribe](https://github.com/Vaibhvee012/CodeScribe)
 
 </div>
-
 ---
 
 ## 🔑 Demo Credentials
